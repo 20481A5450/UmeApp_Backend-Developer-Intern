@@ -45,7 +45,7 @@ Follow the steps below to set up the project locally:
    Ensure that PostgreSQL is installed on your machine. If you don't have it, you can download it from [here](https://www.postgresql.org/download/).
 
 2. **Create a PostgreSQL Database**  
-   You need to manually create a PostgreSQL database for the project. You can use pgAdmin or run the following SQL commands in `psql`:
+   You need to create a PostgreSQL database for the project manually. You can use pgAdmin or run the following SQL commands in `psql`:
 
    ```sql
    CREATE DATABASE actionsuggester;
@@ -60,20 +60,20 @@ Follow the steps below to set up the project locally:
      cd actionsuggester
      ```
 
-    Add Your Database Credentials
-    ```bash
-        DATABASES = {
-            'default': {
-                'ENGINE': 'django.db.backends.postgresql',
-                'NAME': 'actionsuggester',
-                'USER': 'your_username',
-                'PASSWORD': 'your_password',
-                'HOST': 'localhost',
-                'PORT': '5432',
-            }
-        }
-    ```
-    Replace 'your_username' and 'your_password' with your actual PostgreSQL credentials.
+      Add Your Database Credentials
+      ```bash
+          DATABASES = {
+              'default': {
+                  'ENGINE': 'django.db.backends.postgresql',
+                  'NAME': 'actionsuggester',
+                  'USER': 'your_username',
+                  'PASSWORD': 'your_password',
+                  'HOST': 'localhost',
+                  'PORT': '5432',
+              }
+          }
+      ```
+      Replace 'your_username' and 'your_password' with your actual PostgreSQL credentials.
 
    - **Step 2: Create a Virtual Environment**  
      - **Windows (via .bat script):**  
