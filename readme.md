@@ -62,19 +62,6 @@ Follow the steps below to set up the project locally:
 
     Add Your Database Credentials
     ```json
-<<<<<<< HEAD
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'actionsuggester',
-            'USER': 'your_username',
-            'PASSWORD': 'your_password',
-            'HOST': 'localhost',
-            'PORT': '5432',
-        }
-    }
-    Replace 'your_username' and 'your_password' with your actual PostgreSQL credentials.
-=======
         DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.postgresql',
@@ -86,7 +73,6 @@ Follow the steps below to set up the project locally:
             }
         }
         Replace 'your_username' and 'your_password' with your actual PostgreSQL credentials.
->>>>>>> 88d22c432ec487d11ba400eafb7498f32f45aad7
     ```
 
    - **Step 2: Create a Virtual Environment**  
