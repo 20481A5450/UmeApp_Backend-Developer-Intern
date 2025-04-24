@@ -37,30 +37,6 @@ The Action Suggester API analyzes a short user text message (e.g., "I want to or
   ]
 }
 ```
-Example:
-Request:
-
-```json
-{
-  "query": "I want to order a pizza tonight"
-}
-```
-
-Response:
-
-```json
-{
-  "query": "I want to order a pizza tonight",
-  "analysis": {
-    "tone": "Neutral",
-    "intent": "Order Food"
-  },
-  "suggested_actions": [
-    {"action_code": "ORDER_FOOD", "display_text": "Order Food Online"},
-    {"action_code": "FIND_RECIPE", "display_text": "Find Pizza Recipes"}
-  ]
-}
-```
 
 ## Project Setup
 Follow the steps below to set up the project locally:
@@ -83,6 +59,21 @@ Follow the steps below to set up the project locally:
      git clone https://github.com/yourusername/actionsuggester.git
      cd actionsuggester
      ```
+
+    Add Your Database Credentials
+    ```json
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'actionsuggester',
+            'USER': 'your_username',
+            'PASSWORD': 'your_password',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
+    Replace 'your_username' and 'your_password' with your actual PostgreSQL credentials.
+    ```
 
    - **Step 2: Create a Virtual Environment**  
      - **Windows (via .bat script):**  
@@ -118,7 +109,7 @@ Follow the steps below to set up the project locally:
      python manage.py migrate
      ```
 
-4. **Run the Development Server**  
+1. **Run the Development Server**  
    To run the development server, use the following command:
 
    ```bash
@@ -128,7 +119,7 @@ Follow the steps below to set up the project locally:
    You can now test the API endpoint at `http://127.0.0.1:8000/api/analyze/`.
 
 ## Testing
-You can use tools like Postman or cURL to test the API:
+You can use tools like Postman/Httpie or cURL to test the API:
 
 - **POST request to `http://127.0.0.1:8000/api/analyze/`:**
 
@@ -183,6 +174,7 @@ pip install -r requirements.txt
 ```
 
 ## Known Issues and Troubleshooting
-- **404 Gemini API error:** Ensure that you are using a valid Gemini API model and key.
+- **404 Gemini API error:** - Ensure that you are using a valid Gemini API model and key in the `.env` file.
+                            - The `/actionsuggester/api/models_google.py` script retrieves all available models from the Google AI platform.    
 - **JSONDecodeError:** If the Gemini response format changes or is malformed, check the API call or inspect the raw response for errors.
 
