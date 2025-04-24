@@ -62,16 +62,16 @@ Follow the steps below to set up the project locally:
 
       Add Your Database Credentials
       ```bash
-          DATABASES = {
-              'default': {
-                  'ENGINE': 'django.db.backends.postgresql',
-                  'NAME': 'actionsuggester',
-                  'USER': 'your_username',
-                  'PASSWORD': 'your_password',
-                  'HOST': 'localhost',
-                  'PORT': '5432',
-              }
+      DATABASES = {
+          'default': {
+              'ENGINE': 'django.db.backends.postgresql',
+              'NAME': 'actionsuggester',
+              'USER': 'your_username',
+              'PASSWORD': 'your_password',
+              'HOST': 'localhost',
+              'PORT': '5432',
           }
+      }
       ```
       Replace 'your_username' and 'your_password' with your actual PostgreSQL credentials.
 
