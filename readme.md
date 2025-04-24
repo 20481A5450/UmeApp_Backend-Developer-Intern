@@ -61,7 +61,7 @@ Follow the steps below to set up the project locally:
      ```
 
     Add Your Database Credentials
-    ```json
+    ```bash
         DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.postgresql',
@@ -72,8 +72,8 @@ Follow the steps below to set up the project locally:
                 'PORT': '5432',
             }
         }
-        Replace 'your_username' and 'your_password' with your actual PostgreSQL credentials.
     ```
+    Replace 'your_username' and 'your_password' with your actual PostgreSQL credentials.
 
    - **Step 2: Create a Virtual Environment**  
      - **Windows (via .bat script):**  
