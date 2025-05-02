@@ -48,7 +48,20 @@ Follow the steps below to set up the project locally:
    You need to create a PostgreSQL database for the project manually. You can use pgAdmin or run the following SQL commands in `psql`:
 
    ```sql
-   CREATE DATABASE actionsuggester;
+    
+    CREATE DATABASE actionsuggester;
+
+    \c actionsuggester
+
+    -- Create the api_querylog table
+    CREATE TABLE IF NOT EXISTS api_querylog (
+        id BIGSERIAL PRIMARY KEY,
+        query TEXT NOT NULL,
+        timestamp TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+        tone VARCHAR(100) NOT NULL,
+        intent VARCHAR(100) NOT NULL,
+        suggested_actions JSONB NOT NULL
+    );
    ```
 
 3. **Set Up the Project**  

@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'actionsuggester',
-        'USER': 'your_username',  # Replace with your PostgreSQL username
-        'PASSWORD': 'your_password',  # Replace with your PostgreSQL password
+        'USER': 'postgres',  # Replace with your PostgreSQL username
+        'PASSWORD': 'root',  # Replace with your PostgreSQL password
         'HOST': 'localhost',
         'PORT': '5432',
     }

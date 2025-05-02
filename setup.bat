@@ -25,10 +25,7 @@ if exist ".example.env" (
 
 REM 5. Ask user to manually create PostgreSQL database
 echo  Please ensure your PostgreSQL database is created manually.
-echo    You can use pgAdmin or run SQL in psql:
-echo.
-echo    CREATE DATABASE actionsuggester;
-echo.
+echo  Try running the commands from create_db.sql
 pause
 
 REM 6. Apply Django migrations
